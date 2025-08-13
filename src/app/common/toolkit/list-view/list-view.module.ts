@@ -13,7 +13,6 @@ import {
   ListViewTextDirective,
   ListViewTrailingDirective,
 } from './list-view.directives';
-import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   exports: [

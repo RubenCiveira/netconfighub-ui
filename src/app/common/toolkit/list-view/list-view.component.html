@@ -10,18 +10,21 @@
     <ul class="material-list">
       <cdk-virtual-scroll-viewport #listScroll class="lcontent" [itemSize]="itemHeight">
         <li *cdkVirtualFor="let item of data()" class="material-list-item" (click)="selectAndActivate(item)">
-          @let avatar = fallbackIcon( item );
+          @let avatar = fallbackIcon(item);
           @if (row().icon()) {
             <div class="material-list-item-icon-container">
               <i class="material-list-item-icon">
                 <ng-container *ngTemplateOutlet="row().icon()!.template; context: { $implicit: item }"></ng-container>
               </i>
             </div>
-          } @else {
-            <div class="material-list-item-icon-container" [ngStyle]="{color: avatar.fg, backgroundColor: avatar.bg}" 
-                      (click)="selectAndActivate(item)"
-                      style="display: flex; align-items: center; justify-content: center;">
-                  <div [attr.aria-label]="avatar.ariaLabel">{{ avatar.initials}}</div>
+          } @else if( avatar ) {
+            <div
+              class="material-list-item-icon-container"
+              [ngStyle]="{ color: avatar.fg, backgroundColor: avatar.bg }"
+              (click)="selectAndActivate(item)"
+              style="display: flex; align-items: center; justify-content: center"
+            >
+              <div [attr.aria-label]="avatar.ariaLabel">{{ avatar.initials }}</div>
             </div>
           }
           <div class="material-list-item-content">
@@ -58,47 +61,54 @@
         </li>
       </cdk-virtual-scroll-viewport>
     </ul>
-  } @else if(mode() == 'card') {
+  } @else if (mode() == 'card') {
     <div class="card-grid">
-      @for(item of data(); track $index) {
-        <mat-card  appearance="outlined">
+      @for (item of data(); track $index) {
+        <mat-card appearance="outlined">
           <mat-card-header>
-            @let avatar = fallbackIcon( item );
-            @if ( row().icon() ) {
+            @let avatar = fallbackIcon(item);
+            @if (row().icon()) {
               <div mat-card-avatar>
                 <ng-container *ngTemplateOutlet="row().icon()!.template; context: { $implicit: item }"></ng-container>
               </div>
-            } @else {
-                <div mat-card-avatar [ngStyle]="{color: avatar.fg, backgroundColor: avatar.bg}" 
-                      (click)="selectAndActivate(item)"
-                      style="display: flex; align-items: center; justify-content: center;">
-                  <div [attr.aria-label]="avatar.ariaLabel">{{ avatar.initials}}</div>
-                </div>
-              }
-             @if (row().title()) {
+            } @else if( avatar ) {
+              <div
+                mat-card-avatar
+                [ngStyle]="{ color: avatar.fg, backgroundColor: avatar.bg }"
+                (click)="selectAndActivate(item)"
+                style="display: flex; align-items: center; justify-content: center"
+              >
+                <div [attr.aria-label]="avatar.ariaLabel">{{ avatar.initials }}</div>
+              </div>
+            }
+            @if (row().title()) {
               <mat-card-title>
                 <div (click)="selectAndActivate(item)">
-                  <ng-container *ngTemplateOutlet="row().title()!.template; context: { $implicit: item }"></ng-container>
+                  <ng-container
+                    *ngTemplateOutlet="row().title()!.template; context: { $implicit: item }"
+                  ></ng-container>
                 </div>
               </mat-card-title>
-             }
-             @if (row().subtitle()) {
+            }
+            @if (row().subtitle()) {
               <mat-card-subtitle>
-                <ng-container *ngTemplateOutlet="row().subtitle()!.template; context: { $implicit: item }"></ng-container>
+                <ng-container
+                  *ngTemplateOutlet="row().subtitle()!.template; context: { $implicit: item }"
+                ></ng-container>
               </mat-card-subtitle>
-             }
+            }
           </mat-card-header>
           <mat-card-content>
             @if (row().text()) {
-                <ng-container *ngTemplateOutlet="row().text()!.template; context: { $implicit: item }"></ng-container>
+              <ng-container *ngTemplateOutlet="row().text()!.template; context: { $implicit: item }"></ng-container>
             } @else {
-              <p> .... {{item.uid}} {{ item.enabled}} </p>
+              <p>.... {{ item.uid }} {{ item.enabled }}</p>
             }
           </mat-card-content>
           <mat-card-actions>
-              @if (row().action()) {
-                <ng-container *ngTemplateOutlet="row().action()!.template; context: { $implicit: item }"></ng-container>
-              }
+            @if (row().action()) {
+              <ng-container *ngTemplateOutlet="row().action()!.template; context: { $implicit: item }"></ng-container>
+            }
           </mat-card-actions>
         </mat-card>
       }

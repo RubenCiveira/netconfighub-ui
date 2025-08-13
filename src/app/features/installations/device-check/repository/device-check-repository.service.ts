@@ -5,6 +5,7 @@ import {
   DeviceCheckFilter,
 } from '@features/installations/device-check/model/device-check.model';
 import { appwriteQuery } from './appwrite-query.method';
+import { DisplayProvider } from '@common/data/display-provider';
 import { appwriteAcl } from './appwrite-acl.method';
 import { selectorProvider, SelectorProvider } from '@common/data/selector-provider';
 import { Acl } from '@common/data/acl/acl.model';
@@ -86,6 +87,13 @@ export class DeviceCheckRepository {
   }
   projections(includes: string[]): Shift<DeviceCheckProjection[], DeviceCheckFilter> {
     return this.repo.projections(includes);
+  }
+  displayProvider(): DisplayProvider<DeviceCheck> {
+    return {
+      display: (item: DeviceCheck) => {
+        return item.result!;
+      },
+    };
   }
   selectorProvider(filter?: Signal<DeviceCheckFilter>): SelectorProvider<DeviceCheck, { $ref: string }> {
     return selectorProvider({

@@ -22,10 +22,16 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SelectionModel } from '@common/data/selection-model';
 import { MatCardModule } from '@angular/material/card';
 import { computeAvatarSpec, AvatarSpec } from '../avatar-text.service';
-  
+import { DisplayProvider } from '@common/data/display-provider';
+
 @Component({
   templateUrl: 'list-view.component.html',
-  styleUrls: ['list-view.component.scss', 'list-view.table.component.scss', 'list-view.grid.component.scss', 'list-view.list.component.scss'],
+  styleUrls: [
+    'list-view.component.scss',
+    'list-view.table.component.scss',
+    'list-view.grid.component.scss',
+    'list-view.list.component.scss',
+  ],
   selector: 'list-view',
   standalone: true,
   imports: [CommonModule, LayoutModule, ScrollingModule, MatCheckboxModule, MatProgressBarModule, MatCardModule],
@@ -38,7 +44,8 @@ export class ListViewComponent implements OnInit, OnDestroy {
   mobile = signal<boolean>(false);
   rowIcons = signal<number>(3);
   data = input.required<any[] | undefined>();
-  mode = input<string>("list");
+  mode = input<string>('list');
+  display = input<DisplayProvider<any>>();
   selectionMultiple = input<boolean>(false);
   searching = input<boolean>();
   selectionModel = input<SelectionModel<any> | undefined>();
@@ -144,8 +151,9 @@ export class ListViewComponent implements OnInit, OnDestroy {
     return this.selectionModel()?.isSelected(row);
   }
 
-  fallbackIcon(str: any): AvatarSpec {
-    return computeAvatarSpec( str.name );
+  fallbackIcon(str: any): AvatarSpec | null {
+    const displayer = this.display();
+    return displayer ? computeAvatarSpec( displayer.display( str.name) ) : null;
   }
 
   private updateAvailableWidth = (): void => {
