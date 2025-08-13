@@ -45,7 +45,7 @@ export interface ItemMapper<T> {
           @if (action.icon()) {
             <button
               mat-icon-button
-              (click)="executeAction(action.name, selectionModel.selected())"
+              (click)="executeAction(action.name, [row])"
               [disabled]="!action.enabled(selectionModel.selected())()"
             >
               <mat-icon>{{ action.icon() }}</mat-icon>
@@ -53,7 +53,7 @@ export interface ItemMapper<T> {
           } @else {
             <button
               mat-raised-button
-              (click)="executeAction(action.name, selectionModel.selected())"
+              (click)="executeAction(action.name, [row])"
               [disabled]="!action.enabled(selectionModel.selected())()"
             >
               {{ action.label() }}

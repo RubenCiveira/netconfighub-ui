@@ -20,13 +20,15 @@ import { CdkVirtualScrollViewport, ScrollingModule } from '@angular/cdk/scrollin
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SelectionModel } from '@common/data/selection-model';
-
+import { MatCardModule } from '@angular/material/card';
+import { computeAvatarSpec, AvatarSpec } from '../avatar-text.service';
+  
 @Component({
   templateUrl: 'list-view.component.html',
-  styleUrls: ['list-view.component.scss', 'list-view.table.component.scss', 'list-view.list.component.scss'],
+  styleUrls: ['list-view.component.scss', 'list-view.table.component.scss', 'list-view.grid.component.scss', 'list-view.list.component.scss'],
   selector: 'list-view',
   standalone: true,
-  imports: [CommonModule, LayoutModule, ScrollingModule, MatCheckboxModule, MatProgressBarModule],
+  imports: [CommonModule, LayoutModule, ScrollingModule, MatCheckboxModule, MatProgressBarModule, MatCardModule],
 })
 export class ListViewComponent implements OnInit, OnDestroy {
   next = output<void>();
@@ -36,6 +38,7 @@ export class ListViewComponent implements OnInit, OnDestroy {
   mobile = signal<boolean>(false);
   rowIcons = signal<number>(3);
   data = input.required<any[] | undefined>();
+  mode = input<string>("card");
   selectionMultiple = input<boolean>(false);
   searching = input<boolean>();
   selectionModel = input<SelectionModel<any> | undefined>();
@@ -150,6 +153,10 @@ export class ListViewComponent implements OnInit, OnDestroy {
   isSelected(row: any) {
     return this.selectionModel()?.isSelected(row);
     //    return this.checkedIndexOf(row) !== -1;
+  }
+
+  fallbackIcon(str: any): AvatarSpec {
+    return computeAvatarSpec( str.name );
   }
 
   // private checkedIndexOf(row: any) {
