@@ -4,6 +4,5 @@ import { Observable, of } from 'rxjs';
 export function appwriteReader(data: any): Site {
   const copy = { ...data } as any;
   copy.client = { $ref: data.client, $id: (data as any).client?.$id };
-  console.log("WITH READER MOVEMENT", copy);
   return copy;
 }

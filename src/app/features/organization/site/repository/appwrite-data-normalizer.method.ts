@@ -4,6 +4,5 @@ import { Observable, of } from 'rxjs';
 export function appwriteDataNormalizer(data: Site): Observable<Site> {
   const copy = { ...data } as any;
   copy.client = (data as any)?.client?.$ref;
-  console.log("HAS DATA TO NORMALIZE", copy);
   return of(copy);
 }

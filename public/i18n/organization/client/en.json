@@ -78,6 +78,11 @@
       "report": "Records have been enabled",
       "title": "enable selection",
       "tooltip": "enable selected records"
+    },
+    "sites": {
+      "label": "Sites",
+      "title": "Sites",
+      "tooltip": "Sites"
     }
   },
   "form-group": {

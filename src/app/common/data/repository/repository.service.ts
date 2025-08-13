@@ -207,8 +207,7 @@ export class RepositoryService<T, F> {
     const key = this.itemKey(item);
     return this.meta.provider.update(key, item).pipe(
       take(1),
-      tap((result: any) => {
-        console.log("Tras hacer update", result);
+      tap((result) => {
         this.cacheItem(key, result);
       }),
     );

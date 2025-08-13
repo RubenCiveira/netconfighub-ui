@@ -9,6 +9,7 @@ import { ClientViewEnableActionModule } from 'app/features/organization/client/a
 import { ClientViewEnableSelectionActionModule } from 'app/features/organization/client/actions/client-view-enable-selection-action/client-view-enable-selection-action.module';
 import { ClientViewDisableActionModule } from 'app/features/organization/client/actions/client-view-disable-action/client-view-disable-action.module';
 import { ClientViewDisableSelectionActionModule } from 'app/features/organization/client/actions/client-view-disable-selection-action/client-view-disable-selection-action.module';
+import { ClientViewSitesModule } from 'app/features/organization/client/actions/client-view-sites/client-view-sites.module';
 import { ClientViewStandarActionsComponent } from './client-view-standar-actions.component';
 import { provideTranslocoScope } from '@jsverse/transloco';
 import { NgModule } from '@angular/core';
@@ -27,6 +28,7 @@ import { NgModule } from '@angular/core';
     ClientViewEditActionModule,
     ClientViewEnableActionModule,
     ClientViewEnableSelectionActionModule,
+    ClientViewSitesModule,
   ],
   providers: [provideTranslocoScope({ scope: 'organization/client', alias: 'organization.client' })],
   bootstrap: [],

@@ -63,12 +63,13 @@ export class AppwriteProvider<T extends { id?: string }, F = any> implements Rep
       return this.dataNormalizer(item).pipe(
         mergeMap((normalized) =>
           from(this.database.createDocument(this.databaseId, this.collectionId, ID.unique(), normalized)).pipe(
-            map((doc) => this.dataReader({ ...doc, id: doc.$id }) as any)),
+            map((doc) => this.dataReader({ ...doc, id: doc.$id }) as any),
+          ),
         ),
       );
     } else {
       return from(this.database.createDocument(this.databaseId, this.collectionId, ID.unique(), item)).pipe(
-        map((doc) =>this.dataReader(  ({ ...doc, id: doc.$id }) as any)),
+        map((doc) => this.dataReader({ ...doc, id: doc.$id } as any)),
       );
     }
   }
@@ -81,7 +82,7 @@ export class AppwriteProvider<T extends { id?: string }, F = any> implements Rep
             mergeMap((original) =>
               from(
                 this.database.updateDocument(this.databaseId, this.collectionId, (original as any).$id, normalized),
-              ).pipe(map((doc) => this.dataReader( ({ ...doc, id: doc.$id }) as any))),
+              ).pipe(map((doc) => this.dataReader({ ...doc, id: doc.$id } as any))),
             ),
           ),
         ),
@@ -90,7 +91,7 @@ export class AppwriteProvider<T extends { id?: string }, F = any> implements Rep
       return this.findDoc(key).pipe(
         mergeMap((original) =>
           from(this.database.updateDocument(this.databaseId, this.collectionId, (original as any).$id, item)).pipe(
-            map((doc) => this.dataReader( ({ ...doc, id: doc.$id }) as any)),
+            map((doc) => this.dataReader({ ...doc, id: doc.$id } as any)),
           ),
         ),
       );
