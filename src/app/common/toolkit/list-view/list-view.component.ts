@@ -91,12 +91,12 @@ export class ListViewComponent implements OnInit, OnDestroy {
             if (bp[Breakpoints.XLarge]) return 5;
             if (bp[Breakpoints.Large]) return 4;
             if (bp[Breakpoints.Medium]) return 3;
-            if (bp[Breakpoints.Small]) return 1;
-            return 1;
+            if (bp[Breakpoints.Small]) return 0;
+            return 0;
           }),
         )
         .subscribe((result) => {
-          this.rowIcons.set(result);
+          this.rowIcons.set(result + 1);
         }),
     );
 

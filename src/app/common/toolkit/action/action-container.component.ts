@@ -236,19 +236,6 @@ export class ActionContainerComponent implements OnDestroy {
   constructor(observer: BreakpointObserver, localRouter: LocalRouteStateService, injector: Injector) {
     this.subs = new Subscription();
     // Define tus umbrales y cuántos iconos quieres en cada uno
-    const mapBpToCount = (state: Record<string, boolean>) => {
-      // Prioridad de mayor a menor
-      console.log(Breakpoints.Web);
-      console.log(Breakpoints.Tablet);
-      console.log('MAPPING ', state);
-      console.log(' - WEB ', state[Breakpoints.Web]);
-      console.log('MIRAMOS A ');
-      if (state['(min-width: 1600px)']) return 5;
-      if (state['(min-width: 1200px)']) return 4;
-      if (state[Breakpoints.Web]) return 3; // >= 960px
-      if (state[Breakpoints.Tablet]) return 2; // >= 600px
-      return 1; // móvil
-    };
     this.subs.add(
       observer
         .observe([
@@ -341,6 +328,7 @@ export class ActionContainerComponent implements OnDestroy {
     const max = this.contextualconSize();
     return actions.filter((act) => act.visible([row])()).slice(0, max);
   }
+
   inlineMenu(row: any) {
     const max = this.contextualconSize();
     const actions = this.contextualActions();
