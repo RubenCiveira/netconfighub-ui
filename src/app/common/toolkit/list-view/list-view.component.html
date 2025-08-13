@@ -17,7 +17,7 @@
                 <ng-container *ngTemplateOutlet="row().icon()!.template; context: { $implicit: item }"></ng-container>
               </i>
             </div>
-          } @else if( avatar ) {
+          } @else if (avatar) {
             <div
               class="material-list-item-icon-container"
               [ngStyle]="{ color: avatar.fg, backgroundColor: avatar.bg }"
@@ -71,7 +71,7 @@
               <div mat-card-avatar>
                 <ng-container *ngTemplateOutlet="row().icon()!.template; context: { $implicit: item }"></ng-container>
               </div>
-            } @else if( avatar ) {
+            } @else if (avatar) {
               <div
                 mat-card-avatar
                 [ngStyle]="{ color: avatar.fg, backgroundColor: avatar.bg }"
@@ -102,7 +102,7 @@
             @if (row().text()) {
               <ng-container *ngTemplateOutlet="row().text()!.template; context: { $implicit: item }"></ng-container>
             } @else {
-              <p>.... {{ item.uid }} {{ item.enabled }}</p>
+              <br />
             }
           </mat-card-content>
           <mat-card-actions>

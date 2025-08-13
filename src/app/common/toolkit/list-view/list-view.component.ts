@@ -153,7 +153,7 @@ export class ListViewComponent implements OnInit, OnDestroy {
 
   fallbackIcon(str: any): AvatarSpec | null {
     const displayer = this.display();
-    return displayer ? computeAvatarSpec( displayer.display( str.name) ) : null;
+    return displayer ? computeAvatarSpec(displayer.display(str)) : null;
   }
 
   private updateAvailableWidth = (): void => {
