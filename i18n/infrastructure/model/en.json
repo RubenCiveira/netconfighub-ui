@@ -1,0 +1,123 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create",
+      "title": "Creating new model",
+      "tooltip": "Create a new model record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a model"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Ticket passed",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail",
+      "title": "Viewing the values of a model",
+      "tooltip": "View the values of a model"
+    },
+    "edit": {
+      "label": "Edit",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a model"
+    }
+  },
+  "form-group": {
+    "name": {
+      "error": {
+        "maxlength": "Name must be less than 250 characters",
+        "required": "Name obligatory"
+      },
+      "label": "Name",
+      "placeholder": "The model name"
+    },
+    "type": {
+      "error": {
+        "required": "Type is required"
+      },
+      "label": "type",
+      "placeholder": "The type of model"
+    },
+    "vendor": {
+      "error": {
+        "required": "vendor is required"
+      },
+      "label": "vendor",
+      "placeholder": "The model vendor"
+    }
+  },
+  "list": {
+    "column": {
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      },
+      "type": {
+        "title": "type",
+        "tooltip": "type"
+      },
+      "vendor": {
+        "title": "vendor",
+        "tooltip": "vendor"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "name": {
+      "label": "Name",
+      "placeholder": ""
+    },
+    "order": {
+      "label": "order",
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      },
+      "placeholder": "Order in which to retrieve results"
+    },
+    "search": {
+      "label": "search",
+      "placeholder": "Search by Text"
+    },
+    "type": {
+      "label": "type",
+      "placeholder": ""
+    },
+    "types": {
+      "label": "Types",
+      "placeholder": ""
+    },
+    "vendor": {
+      "label": "vendor",
+      "placeholder": ""
+    },
+    "vendors": {
+      "label": "seller",
+      "placeholder": ""
+    }
+  }
+}

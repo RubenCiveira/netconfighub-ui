@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "config de netconfighub"
+  },
+  "api": {
+    "civi-netconfighub": {
+      "identity": "main",
+      "url": "http://civi-netconfighub/dev/hermeshift/hermeshift-api/public"
+    }
+  },
+  "i18n": {
+    "available-langs": ["es", "pt", "fr", "de"]
+  },
+  "identity": {
+    "main": {
+      "type": "appwrite"
+    }
+  },
+  "appwrite": {
+    "endpoint": "https://appwrite.civeira.net/v1",
+    "project": "689bd20f00208d6984fe"
+  },
+  "telemetry": {
+    "name": "",
+    "exporter": {
+      "tracer": {
+        "url": "https://xxxxxxx/v1/traces",
+        "headers": {
+          "x-honeycomb-team": "xxxx"
+        }
+      },
+      "logger": {
+        "url": "https://xxxxxx/v1/logs",
+        "headers": {
+          "x-honeycomb-team": "xxxx"
+        }
+      }
+    }
+  }
+}
