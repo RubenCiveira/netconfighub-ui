@@ -1,0 +1,151 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create",
+      "title": "Creating new device check",
+      "tooltip": "Create a new device check record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a device check"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Ticket passed",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail",
+      "title": "Viewing the values of a device check",
+      "tooltip": "View the values of a device check"
+    },
+    "edit": {
+      "label": "Edit",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a device check"
+    }
+  },
+  "form-group": {
+    "checked-at": {
+      "label": "Checked At",
+      "placeholder": "The checked in device check",
+      "time": {
+        "label": "Time",
+        "placeholder": "Time"
+      }
+    },
+    "checked-by": {
+      "label": "Revised by:",
+      "placeholder": "The verified by de device check"
+    },
+    "checkedAt": {
+      "error": {
+        "required": "Verified on is required"
+      }
+    },
+    "checkedBy": {
+      "error": {
+        "maxlength": "Reviewed by must be less than 250 characters",
+        "required": "Reviewed by is required"
+      }
+    },
+    "details": {
+      "error": {
+        "maxlength": "details must be less than 250 characters"
+      },
+      "label": "details",
+      "placeholder": "The details of device check"
+    },
+    "project-device": {
+      "label": "project device",
+      "placeholder": "The device check device project"
+    },
+    "projectDevice": {
+      "error": {
+        "required": "project device is required"
+      }
+    },
+    "result": {
+      "error": {
+        "required": "result is required"
+      },
+      "label": "result",
+      "options": {
+        "fail": "FAIL",
+        "pass": "PASS"
+      },
+      "placeholder": "The result of the device check"
+    }
+  },
+  "list": {
+    "column": {
+      "checked-at": {
+        "title": "checked at",
+        "tooltip": "checked at"
+      },
+      "checked-by": {
+        "title": "checked by",
+        "tooltip": "checked by"
+      },
+      "details": {
+        "title": "details",
+        "tooltip": "details"
+      },
+      "project-device": {
+        "title": "project device",
+        "tooltip": "project device"
+      },
+      "result": {
+        "title": "result",
+        "tooltip": "result"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "order": {
+      "label": "order",
+      "options": {
+        "null": "Default",
+        "result-asc": "result-asc",
+        "result-desc": "result-desc"
+      },
+      "placeholder": "Order in which to retrieve results"
+    },
+    "project-device": {
+      "label": "project device",
+      "placeholder": ""
+    },
+    "project-devices": {
+      "label": "project devices",
+      "placeholder": ""
+    },
+    "result": {
+      "label": "result",
+      "placeholder": ""
+    },
+    "search": {
+      "label": "search",
+      "placeholder": "Search by Text"
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create",
+      "title": "Creating new project",
+      "tooltip": "Create a new project record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a project"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Ticket passed",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail",
+      "title": "Viewing the values of a project",
+      "tooltip": "View a project's values"
+    },
+    "edit": {
+      "label": "Edit",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a project"
+    }
+  },
+  "form-group": {
+    "description": {
+      "error": {
+        "maxlength": "description must be less than 250 characters"
+      },
+      "label": "description",
+      "placeholder": "The project description"
+    },
+    "name": {
+      "error": {
+        "maxlength": "Name must be less than 250 characters",
+        "required": "Name obligatory"
+      },
+      "label": "Name",
+      "placeholder": "The project name"
+    },
+    "operation-mode": {
+      "label": "mode of operation",
+      "options": {
+        "double": "DOUBLE",
+        "single": "SINGLE"
+      },
+      "placeholder": "The mode of operation of the project"
+    },
+    "operationMode": {
+      "error": {
+        "required": "mode of operation is required"
+      }
+    },
+    "planned-at": {
+      "label": "planned in",
+      "placeholder": "The planned in of project",
+      "time": {
+        "label": "Time",
+        "placeholder": "Time"
+      }
+    },
+    "planned-config-at": {
+      "label": "planned configuration in",
+      "placeholder": "Only if d o u b l e",
+      "time": {
+        "label": "Time",
+        "placeholder": "Time"
+      }
+    },
+    "plannedAt": {
+      "error": {
+        "required": "planned in is required"
+      }
+    },
+    "site": {
+      "error": {
+        "required": "site is required"
+      },
+      "label": "site",
+      "placeholder": "The project site"
+    },
+    "status": {
+      "error": {
+        "required": "State is required"
+      },
+      "label": "condition",
+      "options": {
+        "completed": "COMPLETED",
+        "in-progress": "IN_PROGRESS",
+        "planned": "PLANNED"
+      },
+      "placeholder": "The project status"
+    }
+  },
+  "list": {
+    "column": {
+      "description": {
+        "title": "description",
+        "tooltip": "description"
+      },
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      },
+      "operation-mode": {
+        "title": "operation mode",
+        "tooltip": "operation mode"
+      },
+      "planned-at": {
+        "title": "planned at",
+        "tooltip": "planned at"
+      },
+      "planned-config-at": {
+        "title": "planned config at",
+        "tooltip": "planned config at"
+      },
+      "site": {
+        "title": "site",
+        "tooltip": "site"
+      },
+      "status": {
+        "title": "status",
+        "tooltip": "status"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "name": {
+      "label": "Name",
+      "placeholder": ""
+    },
+    "order": {
+      "label": "order",
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      },
+      "placeholder": "Order in which to retrieve results"
+    },
+    "search": {
+      "label": "search",
+      "placeholder": "Search by Text"
+    },
+    "site": {
+      "label": "site",
+      "placeholder": ""
+    },
+    "sites": {
+      "label": "sites\n",
+      "placeholder": ""
+    }
+  }
+}

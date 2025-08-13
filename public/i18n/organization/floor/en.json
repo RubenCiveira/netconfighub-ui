@@ -1,0 +1,117 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create",
+      "title": "Creating new floor",
+      "tooltip": "Create a new floor record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a floor"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Ticket passed",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail",
+      "title": "Viewing the values of a floor",
+      "tooltip": "View the values of a floor"
+    },
+    "edit": {
+      "label": "Edit",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a floor"
+    }
+  },
+  "form-group": {
+    "image-path": {
+      "label": "Image Path",
+      "placeholder": "The image path of floor"
+    },
+    "imagePath": {
+      "error": {
+        "required": "Image Path is required"
+      }
+    },
+    "name": {
+      "error": {
+        "maxlength": "Name must be less than 250 characters",
+        "required": "Name obligatory"
+      },
+      "label": "Name",
+      "placeholder": "The name of floor"
+    },
+    "site": {
+      "error": {
+        "required": "site is required"
+      },
+      "label": "site",
+      "placeholder": "The floor site"
+    }
+  },
+  "list": {
+    "column": {
+      "image-path": {
+        "title": "image path",
+        "tooltip": "image path"
+      },
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      },
+      "site": {
+        "title": "site",
+        "tooltip": "site"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "name": {
+      "label": "Name",
+      "placeholder": ""
+    },
+    "order": {
+      "label": "order",
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      },
+      "placeholder": "Order in which to retrieve results"
+    },
+    "search": {
+      "label": "search",
+      "placeholder": "Search by Text"
+    },
+    "site": {
+      "label": "site",
+      "placeholder": ""
+    },
+    "sites": {
+      "label": "sites\n",
+      "placeholder": ""
+    }
+  }
+}

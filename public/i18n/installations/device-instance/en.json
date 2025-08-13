@@ -1,0 +1,182 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create",
+      "title": "Creating new device instance",
+      "tooltip": "Create a new device instance record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a device instance"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Ticket passed",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail",
+      "title": "Viewing the values of a device instance",
+      "tooltip": "View the values of a device instance"
+    },
+    "edit": {
+      "label": "Edit",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a device instance"
+    }
+  },
+  "form-group": {
+    "installed-at": {
+      "label": "Installed at",
+      "placeholder": "The one installed on the device instance",
+      "time": {
+        "label": "Time",
+        "placeholder": "Time"
+      }
+    },
+    "installed-by": {
+      "label": "INSTALLED BY",
+      "placeholder": "Technician Email User ID"
+    },
+    "installedAt": {
+      "error": {
+        "required": "Installed on is required"
+      }
+    },
+    "installedBy": {
+      "error": {
+        "maxlength": "INSTALLED BY must be less than 250 characters",
+        "required": "INSTALLED BY is required"
+      }
+    },
+    "model": {
+      "error": {
+        "required": "Model is required"
+      },
+      "label": "the model",
+      "placeholder": "The device instance model"
+    },
+    "model-photo": {
+      "label": "A model photo.",
+      "placeholder": "The device instance photo model"
+    },
+    "placement-photo": {
+      "label": "Location Photo",
+      "placeholder": "The device instance photo location"
+    },
+    "project-device": {
+      "label": "project device",
+      "placeholder": "The device device instance project"
+    },
+    "projectDevice": {
+      "error": {
+        "required": "project device is required"
+      }
+    },
+    "serial-number": {
+      "label": "S/N, SER NO, serial number",
+      "placeholder": "The serial number of the device instance"
+    },
+    "serial-number-photo": {
+      "label": "serial number photo",
+      "placeholder": "The device instance photo serial number"
+    },
+    "serialNumber": {
+      "error": {
+        "maxlength": "serial number must be less than 250 characters",
+        "required": "Serial is required"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "installed-at": {
+        "title": "installed at",
+        "tooltip": "installed at"
+      },
+      "installed-by": {
+        "title": "installed by",
+        "tooltip": "installed by"
+      },
+      "model": {
+        "title": "model",
+        "tooltip": "model"
+      },
+      "model-photo": {
+        "title": "model photo",
+        "tooltip": "model photo"
+      },
+      "placement-photo": {
+        "title": "placement photo",
+        "tooltip": "placement photo"
+      },
+      "project-device": {
+        "title": "project device",
+        "tooltip": "project device"
+      },
+      "serial-number": {
+        "title": "serial number",
+        "tooltip": "serial number"
+      },
+      "serial-number-photo": {
+        "title": "serial number photo",
+        "tooltip": "serial number photo"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "model": {
+      "label": "the model",
+      "placeholder": ""
+    },
+    "models": {
+      "label": "traditional",
+      "placeholder": ""
+    },
+    "order": {
+      "label": "order",
+      "options": {
+        "null": "Default",
+        "serial-number-asc": "serial-number-asc",
+        "serial-number-desc": "serial-number-desc"
+      },
+      "placeholder": "Order in which to retrieve results"
+    },
+    "project-device": {
+      "label": "project device",
+      "placeholder": ""
+    },
+    "project-devices": {
+      "label": "project devices",
+      "placeholder": ""
+    },
+    "search": {
+      "label": "search",
+      "placeholder": "Search by Text"
+    },
+    "serial-number": {
+      "label": "S/N, SER NO, serial number",
+      "placeholder": ""
+    }
+  }
+}

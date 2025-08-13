@@ -1,0 +1,187 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create",
+      "title": "Creating new project device",
+      "tooltip": "Create a new project device record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a project device"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Ticket passed",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail",
+      "title": "Viewing the values of a project device",
+      "tooltip": "View the values of a project device"
+    },
+    "edit": {
+      "label": "Edit",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a project device"
+    }
+  },
+  "form-group": {
+    "config-template": {
+      "label": "Use settings template",
+      "placeholder": "The project device config template"
+    },
+    "floor": {
+      "label": "soil",
+      "placeholder": "The project device floor"
+    },
+    "model": {
+      "label": "the model",
+      "placeholder": "The project device model"
+    },
+    "name": {
+      "error": {
+        "maxlength": "Name must be less than 250 characters",
+        "required": "Name obligatory"
+      },
+      "label": "Name",
+      "placeholder": "Name visible in blueprint"
+    },
+    "pos-x": {
+      "label": "   pos x",
+      "placeholder": "0 1"
+    },
+    "pos-y": {
+      "label": "   pos y",
+      "placeholder": "0 1"
+    },
+    "project": {
+      "error": {
+        "required": "project is required"
+      },
+      "label": "project",
+      "placeholder": "The project device project"
+    },
+    "type": {
+      "error": {
+        "required": "Type is required"
+      },
+      "label": "type",
+      "placeholder": "The type of project device"
+    }
+  },
+  "list": {
+    "column": {
+      "config-template": {
+        "title": "config template",
+        "tooltip": "config template"
+      },
+      "floor": {
+        "title": "floor",
+        "tooltip": "floor"
+      },
+      "model": {
+        "title": "model",
+        "tooltip": "model"
+      },
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      },
+      "pos-x": {
+        "title": "pos x",
+        "tooltip": "pos x"
+      },
+      "pos-y": {
+        "title": "pos y",
+        "tooltip": "pos y"
+      },
+      "project": {
+        "title": "project",
+        "tooltip": "project"
+      },
+      "type": {
+        "title": "type",
+        "tooltip": "type"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "config-template": {
+      "label": "Use settings template",
+      "placeholder": ""
+    },
+    "config-templates": {
+      "label": "Setup Templates",
+      "placeholder": ""
+    },
+    "floor": {
+      "label": "soil",
+      "placeholder": ""
+    },
+    "floors": {
+      "label": "flooring",
+      "placeholder": ""
+    },
+    "model": {
+      "label": "the model",
+      "placeholder": ""
+    },
+    "models": {
+      "label": "traditional",
+      "placeholder": ""
+    },
+    "name": {
+      "label": "Name",
+      "placeholder": ""
+    },
+    "order": {
+      "label": "order",
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      },
+      "placeholder": "Order in which to retrieve results"
+    },
+    "project": {
+      "label": "project",
+      "placeholder": ""
+    },
+    "projects": {
+      "label": "architectural projects",
+      "placeholder": ""
+    },
+    "search": {
+      "label": "search",
+      "placeholder": "Search by Text"
+    },
+    "type": {
+      "label": "type",
+      "placeholder": ""
+    },
+    "types": {
+      "label": "Types",
+      "placeholder": ""
+    }
+  }
+}

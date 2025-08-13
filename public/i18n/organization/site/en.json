@@ -1,0 +1,115 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create",
+      "title": "Creating New",
+      "tooltip": "Create a new site record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a site"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Ticket passed",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail",
+      "title": "Viewing the values of a site",
+      "tooltip": "View a site's values"
+    },
+    "edit": {
+      "label": "Edit",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a site"
+    }
+  },
+  "form-group": {
+    "address": {
+      "error": {
+        "maxlength": "address must be less than 250 characters"
+      },
+      "label": "address",
+      "placeholder": "The site address"
+    },
+    "client": {
+      "error": {
+        "required": "client is required"
+      },
+      "label": "client",
+      "placeholder": "The site client"
+    },
+    "name": {
+      "error": {
+        "maxlength": "Name must be less than 250 characters",
+        "required": "Name obligatory"
+      },
+      "label": "Name",
+      "placeholder": "The name of the site"
+    }
+  },
+  "list": {
+    "column": {
+      "address": {
+        "title": "address",
+        "tooltip": "address"
+      },
+      "client": {
+        "title": "client",
+        "tooltip": "client"
+      },
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "client": {
+      "label": "client",
+      "placeholder": ""
+    },
+    "clients": {
+      "label": "clients",
+      "placeholder": ""
+    },
+    "name": {
+      "label": "Name",
+      "placeholder": ""
+    },
+    "order": {
+      "label": "order",
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      },
+      "placeholder": "Order in which to retrieve results"
+    },
+    "search": {
+      "label": "search",
+      "placeholder": "Search by Text"
+    }
+  }
+}
