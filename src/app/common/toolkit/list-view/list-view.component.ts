@@ -38,7 +38,7 @@ export class ListViewComponent implements OnInit, OnDestroy {
   mobile = signal<boolean>(false);
   rowIcons = signal<number>(3);
   data = input.required<any[] | undefined>();
-  mode = input<string>("card");
+  mode = input<string>("list");
   selectionMultiple = input<boolean>(false);
   searching = input<boolean>();
   selectionModel = input<SelectionModel<any> | undefined>();
@@ -64,7 +64,6 @@ export class ListViewComponent implements OnInit, OnDestroy {
   private scrollSubs = new Subscription();
   private availableWidth = signal<number>(0);
   private resizeObserver?: ResizeObserver;
-  // private selectedItems: any[] = [];
 
   public constructor(
     observer: BreakpointObserver,
@@ -105,7 +104,6 @@ export class ListViewComponent implements OnInit, OnDestroy {
       // we need to check effect on data changes
       this.data();
       this.refreshView();
-      // ?.checkViewportSize();
       if (!this.mobile()) {
         this.calculateTableColumns();
       }
@@ -136,32 +134,19 @@ export class ListViewComponent implements OnInit, OnDestroy {
   selectAndActivate(row: any) {
     this.selectionModel()?.select([row]);
     this.activate.emit(row);
-    // this.selectionModel()
   }
 
   check(row: any) {
     this.selectionModel()?.toogle(row);
-    // const index = this.checkedIndexOf(row);
-    // if (index !== -1) {
-    //   this.selectedItems.splice(index, 1);
-    // } else {
-    //   this.selectedItems.push(row);
-    // }
-    // this.checked.emit([...this.selectedItems]);
   }
 
   isSelected(row: any) {
     return this.selectionModel()?.isSelected(row);
-    //    return this.checkedIndexOf(row) !== -1;
   }
 
   fallbackIcon(str: any): AvatarSpec {
     return computeAvatarSpec( str.name );
   }
-
-  // private checkedIndexOf(row: any) {
-  //   return this.selectedItems.map((item) => JSON.stringify(item)).indexOf(JSON.stringify(row));
-  // }
 
   private updateAvailableWidth = (): void => {
     const elementRect = this.elRef.nativeElement.getBoundingClientRect();
