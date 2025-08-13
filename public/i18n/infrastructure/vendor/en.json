@@ -36,6 +36,11 @@
       "label": "Edit",
       "saveBtn": "Update",
       "tooltip": "Modify a vendor's values"
+    },
+    "models": {
+      "label": "Models",
+      "title": "Models",
+      "tooltip": "Models"
     }
   },
   "form-group": {

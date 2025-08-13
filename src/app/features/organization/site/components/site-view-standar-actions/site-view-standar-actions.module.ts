@@ -5,6 +5,7 @@ import { SiteViewEditActionModule } from 'app/features/organization/site/actions
 import { SiteViewDetailActionModule } from 'app/features/organization/site/actions/site-view-detail-action/site-view-detail-action.module';
 import { SiteViewDeleteActionModule } from 'app/features/organization/site/actions/site-view-delete-action/site-view-delete-action.module';
 import { SiteViewDeleteSelectionActionModule } from 'app/features/organization/site/actions/site-view-delete-selection-action/site-view-delete-selection-action.module';
+import { SiteViewFloorsModule } from 'app/features/organization/site/actions/site-view-floors/site-view-floors.module';
 import { SiteViewStandarActionsComponent } from './site-view-standar-actions.component';
 import { provideTranslocoScope } from '@jsverse/transloco';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,7 @@ import { NgModule } from '@angular/core';
     SiteViewDeleteSelectionActionModule,
     SiteViewDetailActionModule,
     SiteViewEditActionModule,
+    SiteViewFloorsModule,
   ],
   providers: [provideTranslocoScope({ scope: 'organization/site', alias: 'organization.site' })],
   bootstrap: [],

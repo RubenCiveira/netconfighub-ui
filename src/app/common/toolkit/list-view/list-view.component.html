@@ -140,12 +140,20 @@
               </span>
             }
             @for (column of table().columns(); track $index) {
-              @if (column.visible) {
+              @if (column.visible && column.title()) {
                 <span
                   class="td"
                   [ngClass]="{ small: !column.title() }"
                   [ngStyle]="{ width: column.displayWidth + 'px', height: column.displayHeight + 'px' }"
                   (click)="selectAndActivate(item)"
+                >
+                  <ng-container *ngTemplateOutlet="column.template; context: { $implicit: item }"></ng-container>
+                </span>
+              } @else if (column.visible) {
+                <span
+                  class="td"
+                  [ngClass]="{ small: !column.title() }"
+                  [ngStyle]="{ width: column.displayWidth + 'px', height: column.displayHeight + 'px' }"
                 >
                   <ng-container *ngTemplateOutlet="column.template; context: { $implicit: item }"></ng-container>
                 </span>

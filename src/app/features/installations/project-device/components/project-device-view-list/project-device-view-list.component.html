@@ -39,6 +39,8 @@
       </div>
     } @else {
       <list-view
+        [mode]="'list'"
+        [display]="displayer"
         [searching]="list.searching()"
         [data]="list()"
         (next)="next()"

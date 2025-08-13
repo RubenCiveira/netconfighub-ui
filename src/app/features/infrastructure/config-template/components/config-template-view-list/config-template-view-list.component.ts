@@ -4,6 +4,7 @@ import {
   ConfigTemplateProjection,
 } from 'app/features/infrastructure/config-template/model/config-template.model';
 import { ConfigTemplateRepository } from 'app/features/infrastructure/config-template/repository/config-template-repository.service';
+import { DisplayProvider } from '@common/data/display-provider';
 import { FormControl } from '@angular/forms';
 import { Shift } from '@common/data/repository/repository.model';
 import { input, effect, Component } from '@angular/core';
@@ -21,8 +22,10 @@ export class ConfigTemplateViewListComponent {
   hidden = input<{ [key: string]: any }>();
   search = new FormControl<any>(undefined);
   list: Shift<ConfigTemplateProjection[], ConfigTemplateFilter>;
+  displayer: DisplayProvider<any>;
 
   constructor(repository: ConfigTemplateRepository) {
+    this.displayer = repository.displayProvider();
     this.list = repository.projections([]);
     effect(() => {
       setTimeout(() => this.makeSearch());

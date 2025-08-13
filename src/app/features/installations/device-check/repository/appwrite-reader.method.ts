@@ -4,5 +4,11 @@ import { Observable, of } from 'rxjs';
 export function appwriteReader(data: any): DeviceCheck {
   const copy = { ...data } as any;
   copy.projectDevice = { $ref: data.projectDevice, $id: (data as any).projectDevice?.$id };
+  if (copy.result == 'PASS') {
+    copy.result = 'pass';
+  }
+  if (copy.result == 'FAIL') {
+    copy.result = 'fail';
+  }
   return copy;
 }

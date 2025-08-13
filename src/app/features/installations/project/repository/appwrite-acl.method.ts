@@ -9,6 +9,10 @@ export function appwriteAcl(): Observable<Acl> {
       { name: 'delete', allowed: true },
       { name: 'list', allowed: true },
       { name: 'retrieve', allowed: true },
+      { name: 'mark-to-plan', allowed: true },
     ],
+    fields: {
+      noEditables: ['status'],
+    },
   });
 }

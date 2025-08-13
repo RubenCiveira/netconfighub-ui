@@ -3,6 +3,7 @@ import {
   DeviceCheckProjection,
   DeviceCheckFilter,
 } from 'app/features/installations/device-check/model/device-check.model';
+import { DisplayProvider } from '@common/data/display-provider';
 import { DeviceCheckRepository } from 'app/features/installations/device-check/repository/device-check-repository.service';
 import { FormControl } from '@angular/forms';
 import { Shift } from '@common/data/repository/repository.model';
@@ -21,8 +22,10 @@ export class DeviceCheckViewListComponent {
   hidden = input<{ [key: string]: any }>();
   search = new FormControl<any>(undefined);
   list: Shift<DeviceCheckProjection[], DeviceCheckFilter>;
+  displayer: DisplayProvider<any>;
 
   constructor(repository: DeviceCheckRepository) {
+    this.displayer = repository.displayProvider();
     this.list = repository.projections(['projectDevice']);
     effect(() => {
       setTimeout(() => this.makeSearch());

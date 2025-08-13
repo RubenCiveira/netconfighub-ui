@@ -84,6 +84,21 @@ export class ProjectRepository {
   projections(includes: string[]): Shift<ProjectProjection[], ProjectFilter> {
     return this.repo.projections(includes);
   }
+  markToPlan(key: string): Observable<Project> {
+    return this.repo.partialByKey(
+      key,
+      {
+        status: 'planned',
+      },
+      'mark-to-plan',
+    );
+  }
+  canMarkToPlanSelection() {
+    return this.repo.canUsePartialsByKey();
+  }
+  markToPlanSelection(filter: ProjectFilter) {
+    return this.repo.partialBySelection(this.publicQueryFilter(filter), { status: 'planned' }, 'mark-to-plan');
+  }
   displayProvider(): DisplayProvider<Project> {
     return {
       display: (item: Project) => {

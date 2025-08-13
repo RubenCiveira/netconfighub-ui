@@ -100,7 +100,6 @@ export class AppwriteProvider<T extends { id?: string }, F = any> implements Rep
 
   patch(keyUrl: string, data: Partial<T>): Observable<T> {
     const key = keyUrl.split('/')[0];
-    console.log('WITH KEY ', key);
     return this.findDoc(key).pipe(
       mergeMap((original) => {
         const values = {} as any;
@@ -110,9 +109,17 @@ export class AppwriteProvider<T extends { id?: string }, F = any> implements Rep
           }
         });
         const modified = { ...values, ...data } as any;
-        return from(
-          this.database.updateDocument(this.databaseId, this.collectionId, (original as any).$id, modified),
-        ).pipe(map((doc) => this.dataReader({ ...doc, id: doc.$id }) as any));
+        if (this.dataNormalizer) {
+          return this.dataNormalizer(modified).pipe(mergeMap(normalized => 
+            from(
+              this.database.updateDocument(this.databaseId, this.collectionId, (original as any).$id, normalized),
+            ).pipe(map((doc) => this.dataReader({ ...doc, id: doc.$id }) as any))
+          ));
+        } else {
+          return from(
+            this.database.updateDocument(this.databaseId, this.collectionId, (original as any).$id, modified),
+          ).pipe(map((doc) => this.dataReader({ ...doc, id: doc.$id }) as any));
+        }
       }),
     );
   }

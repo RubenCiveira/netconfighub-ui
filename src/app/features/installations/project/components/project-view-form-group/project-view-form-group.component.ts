@@ -33,7 +33,7 @@ export class ProjectViewFormGroupComponent extends SubFormEditable<Project> {
         operationMode: new FormControl<any>('single', [Validators.required]),
         plannedAt: new FormControl<Date>(new Date(), [Validators.required]),
         plannedConfigAt: new FormControl<Date>(new Date()),
-        status: new FormControl<any>('planned', [Validators.required]),
+        status: new FormControl<any>('draft'),
         version: new FormControl<number>(0),
       }),
     );
@@ -60,7 +60,7 @@ export class ProjectViewFormGroupComponent extends SubFormEditable<Project> {
         operationMode: 'single',
         plannedAt: new Date(),
         plannedConfigAt: new Date(),
-        status: 'planned',
+        status: 'draft',
         version: 0,
       };
     };

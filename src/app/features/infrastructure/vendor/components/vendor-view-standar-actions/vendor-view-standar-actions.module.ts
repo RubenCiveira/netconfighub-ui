@@ -5,6 +5,7 @@ import { VendorViewEditActionModule } from 'app/features/infrastructure/vendor/a
 import { VendorViewDetailActionModule } from 'app/features/infrastructure/vendor/actions/vendor-view-detail-action/vendor-view-detail-action.module';
 import { VendorViewDeleteActionModule } from 'app/features/infrastructure/vendor/actions/vendor-view-delete-action/vendor-view-delete-action.module';
 import { VendorViewDeleteSelectionActionModule } from 'app/features/infrastructure/vendor/actions/vendor-view-delete-selection-action/vendor-view-delete-selection-action.module';
+import { VendorViewModelsModule } from 'app/features/infrastructure/vendor/actions/vendor-view-models/vendor-view-models.module';
 import { VendorViewStandarActionsComponent } from './vendor-view-standar-actions.component';
 import { provideTranslocoScope } from '@jsverse/transloco';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,7 @@ import { NgModule } from '@angular/core';
     VendorViewDeleteSelectionActionModule,
     VendorViewDetailActionModule,
     VendorViewEditActionModule,
+    VendorViewModelsModule,
   ],
   providers: [provideTranslocoScope({ scope: 'infrastructure/vendor', alias: 'infrastructure.vendor' })],
   bootstrap: [],

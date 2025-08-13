@@ -5,6 +5,10 @@ import { ProjectViewEditActionModule } from 'app/features/installations/project/
 import { ProjectViewDetailActionModule } from 'app/features/installations/project/actions/project-view-detail-action/project-view-detail-action.module';
 import { ProjectViewDeleteActionModule } from 'app/features/installations/project/actions/project-view-delete-action/project-view-delete-action.module';
 import { ProjectViewDeleteSelectionActionModule } from 'app/features/installations/project/actions/project-view-delete-selection-action/project-view-delete-selection-action.module';
+import { ProjectViewMarkToPlanActionModule } from 'app/features/installations/project/actions/project-view-mark-to-plan-action/project-view-mark-to-plan-action.module';
+import { ProjectViewMarkToPlanSelectionActionModule } from 'app/features/installations/project/actions/project-view-mark-to-plan-selection-action/project-view-mark-to-plan-selection-action.module';
+import { ProjectViewMapsModule } from 'app/features/installations/project/actions/project-view-maps/project-view-maps.module';
+import { ProjectViewInventarioModule } from 'app/features/installations/project/actions/project-view-inventario/project-view-inventario.module';
 import { ProjectViewStandarActionsComponent } from './project-view-standar-actions.component';
 import { provideTranslocoScope } from '@jsverse/transloco';
 import { NgModule } from '@angular/core';
@@ -19,6 +23,10 @@ import { NgModule } from '@angular/core';
     ProjectViewDeleteSelectionActionModule,
     ProjectViewDetailActionModule,
     ProjectViewEditActionModule,
+    ProjectViewInventarioModule,
+    ProjectViewMapsModule,
+    ProjectViewMarkToPlanActionModule,
+    ProjectViewMarkToPlanSelectionActionModule,
   ],
   providers: [provideTranslocoScope({ scope: 'installations/project', alias: 'installations.project' })],
   bootstrap: [],

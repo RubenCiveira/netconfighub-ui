@@ -12,5 +12,8 @@ export function appwriteAcl(): Observable<Acl> {
       { name: 'enable', allowed: true },
       { name: 'disable', allowed: true },
     ],
+    fields: {
+      noEditables: ['enabled'],
+    },
   });
 }

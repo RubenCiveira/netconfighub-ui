@@ -10,5 +10,8 @@ export function appwriteAcl(): Observable<Acl> {
       { name: 'list', allowed: true },
       { name: 'retrieve', allowed: true },
     ],
+    fields: {
+      noEditables: [],
+    },
   });
 }

@@ -6,12 +6,16 @@ import {
   contentChild,
   contentChildren,
   effect,
+  forwardRef,
+  Inject,
   Injector,
   input,
   OnDestroy,
+  Optional,
   runInInjectionContext,
   Signal,
   signal,
+  SkipSelf,
   TemplateRef,
   viewChild,
 } from '@angular/core';
@@ -27,6 +31,7 @@ import { map, Subscription } from 'rxjs';
 import { SelectionModel } from 'app/common/data/selection-model';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { ACTION_CONTAINER_REF } from './action-container.tokens';
 
 export interface ItemMapper<T> {
   display(item: T): string;
@@ -38,6 +43,10 @@ export interface ItemMapper<T> {
   standalone: true,
   imports: [MatMenuModule, MatButtonModule, MatIconModule, CommonModule],
   styleUrl: 'action-container.component.scss',
+  providers: [
+    // Este contenedor se expone como referencia inyectable
+    { provide: ACTION_CONTAINER_REF, useExisting: forwardRef(() => ActionContainerComponent) },
+  ],
   template: `
     <ng-template #contextualTemplate let-row="row">
       @for (action of inlineActions(row); track $index) {
@@ -112,15 +121,43 @@ export interface ItemMapper<T> {
 
     <ng-template #activeTemplate>
       <div class="toolbar">
-        <button mat-icon-button (click)="close()">
-          <mat-icon>arrow_back</mat-icon>
-        </button>
-        <div class="toolbar-title">{{ current()?.title() }}</div>
-        @for (action of dialogActions(); track $index) {
+        <div class="toolbar-title" style="margin-left:15px;">
+          @for (step of breadcrumb; track $index) {
+            <div class="bread-step">
+              <div class="bread-step-title" (click)="step.close()">
+                {{ step.name() }}
+              </div>
+              <div class="bread-step-subtitle">
+                {{ step.current()?.title() }}
+                <button mat-icon-button [matMenuTriggerFor]="breadDialogMenu"><mat-icon>more_horiz</mat-icon></button>
+
+                <mat-menu #breadDialogMenu="matMenu">
+                  @for (action of step.breadcrumActions(); track $index) {
+                    <button
+                      mat-menu-item
+                      (click)="step.executeAction(action.name, step.selectionModel.selected())"
+                      [disabled]="!action.enabled(step.selectionModel.selected())()"
+                    >
+                      @if (action.icon()) {
+                        <mat-icon>{{ action.icon() }}</mat-icon>
+                      }
+                      {{ action.label() }}
+                    </button>
+                  }
+                </mat-menu>
+              </div>
+            </div>
+            &gt;
+          }
+          <div class="bread-step">
+            <div class="bread-step-title" (click)="leaf.close()">{{ leaf.name() }}</div>
+          </div>
+        </div>
+        @for (action of leaf.dialogActions(); track $index) {
           <button
             mat-raised-button
-            (click)="executeAction(action.name, selectionModel.selected())"
-            [disabled]="!action.enabled(selectionModel.selected())()"
+            (click)="leaf.executeAction(action.name, leaf.selectionModel.selected())"
+            [disabled]="!action.enabled(leaf.selectionModel.selected())()"
           >
             @if (action.icon()) {
               <mat-icon>{{ action.icon() }}</mat-icon>
@@ -128,16 +165,16 @@ export interface ItemMapper<T> {
             {{ action.label() }}
           </button>
         }
-        @if (dialogMenu().length > 0) {
+        @if (leaf.dialogMenu().length > 0) {
           <button mat-icon-button [matMenuTriggerFor]="theDialogMenu">
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #theDialogMenu="matMenu">
-            @for (action of dialogMenu(); track $index) {
+            @for (action of leaf.dialogMenu(); track $index) {
               <button
                 mat-menu-item
-                (click)="executeAction(action.name, selectionModel.selected())"
-                [disabled]="!action.enabled(selectionModel.selected())()"
+                (click)="leaf.executeAction(action.name, leaf.selectionModel.selected())"
+                [disabled]="!action.enabled(leaf.selectionModel.selected())()"
               >
                 @if (action.icon()) {
                   <mat-icon>{{ action.icon() }}</mat-icon>
@@ -152,12 +189,15 @@ export interface ItemMapper<T> {
 
     <div class="content">
       @if (activeRender) {
-        <ng-container [ngTemplateOutlet]="theActiveTemplate() || null"></ng-container>
-        <ng-container [ngTemplateOutlet]="activeRender"></ng-container>
-      } @else {
-        @if (masterTemplate()) {
-          <ng-container [ngTemplateOutlet]="masterTemplate()!"></ng-container>
+        @if (!parent) {
+          <ng-container [ngTemplateOutlet]="theActiveTemplate() || null"></ng-container>
+          <div class="title">
+            {{ leaf.current()?.title() }}
+          </div>
         }
+        <ng-container [ngTemplateOutlet]="activeRender"></ng-container>
+      } @else if (masterTemplate()) {
+        <ng-container [ngTemplateOutlet]="masterTemplate()!"></ng-container>
       }
     </div>
   `,
@@ -189,6 +229,16 @@ export class ActionContainerComponent implements OnDestroy {
     return actions
       .filter((action) => !action.contextual && action.visible(this.selectionModel.selected())())
       .slice(0, max);
+  });
+  breadcrumActions = computed(() => {
+    const actions = this.actions();
+    return actions.filter(
+      (action) =>
+        action.contextual &&
+        !action.multiple &&
+        this.selectionModel.selected().length == 1 &&
+        action.visible(this.selectionModel.selected())(),
+    );
   });
   dialogActions = computed(() => {
     const actions = this.actions();
@@ -233,7 +283,15 @@ export class ActionContainerComponent implements OnDestroy {
   private bindSubscription?: Subscription;
   private loadSubscription?: Subscription;
 
-  constructor(observer: BreakpointObserver, localRouter: LocalRouteStateService, injector: Injector) {
+  constructor(
+    observer: BreakpointObserver,
+    localRouter: LocalRouteStateService,
+    injector: Injector,
+    @Optional()
+    @SkipSelf()
+    @Inject(ACTION_CONTAINER_REF)
+    public readonly parent?: ActionContainerComponent,
+  ) {
     this.subs = new Subscription();
     // Define tus umbrales y cuántos iconos quieres en cada uno
     this.subs.add(
@@ -394,6 +452,27 @@ export class ActionContainerComponent implements OnDestroy {
     }
   }
 
+  leaf: ActionContainerComponent = this;
+  breadcrumb: ActionContainerComponent[] = [];
+
+  check() {
+    this.goUp([], this);
+  }
+
+  goUp(breadcrumb: ActionContainerComponent[], leaf: ActionContainerComponent) {
+    if (this.parent) {
+      if (this !== leaf) {
+        this.parent.goUp([this, ...breadcrumb], leaf);
+      } else {
+        this.parent.goUp(breadcrumb, leaf);
+      }
+    }
+    setTimeout(() => {
+      this.breadcrumb = this == leaf ? [] : [this, ...breadcrumb];
+      this.leaf = leaf;
+    });
+  }
+
   private execute(action: Action) {
     this.current.set(action);
     const render = action.render();
@@ -401,9 +480,14 @@ export class ActionContainerComponent implements OnDestroy {
       this.activeRender = render;
     }
     action.run();
+    this.check();
   }
 
   close() {
+    this.breadcrumb.forEach((ch) => {
+      ch.executeAction();
+    });
     this.executeAction();
+    this.check();
   }
 }

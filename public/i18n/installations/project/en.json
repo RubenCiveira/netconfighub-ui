@@ -36,6 +36,37 @@
       "label": "Edit",
       "saveBtn": "Update",
       "tooltip": "Modify the values of a project"
+    },
+    "inventario": {
+      "label": "Inventario",
+      "title": "Inventario",
+      "tooltip": "Inventario"
+    },
+    "maps": {
+      "label": "maps",
+      "title": "maps",
+      "tooltip": "maps"
+    },
+    "mark-to-plan": {
+      "cancelBtn": "No mark to plan",
+      "content": "Confirm you want mark to plan",
+      "dismiss": "Accept",
+      "label": "mark to plan project",
+      "okBtn": "mark to plan registration",
+      "report": "If you have a mark to plan",
+      "title": "mark to plan",
+      "tooltip": "Modify the values of a project"
+    },
+    "mark-to-plan-selection": {
+      "cancelBtn": "No mark to plan",
+      "content": "Confirm that you want to mark to plan the selected records",
+      "dismiss": "Accept",
+      "label": "mark to plan project",
+      "okBtn": "mark to plan records",
+      "progress": "Being marked to plan",
+      "report": "Records have been marked to plan",
+      "title": "mark to plan selection",
+      "tooltip": "mark to plan the selected records"
     }
   },
   "form-group": {
@@ -102,6 +133,7 @@
       "label": "condition",
       "options": {
         "completed": "COMPLETED",
+        "draft": "DRAFT",
         "in-progress": "IN_PROGRESS",
         "planned": "PLANNED"
       },

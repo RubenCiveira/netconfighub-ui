@@ -21,6 +21,29 @@
 
 .toolbar .toolbar-title {
   flex: 1;
-  font-size: var(--mat-sys-title-large-size);
+  display: flex;
+  align-items: center; /* centra verticalmente todo */
+  gap: 8px; /* espacio entre pasos y separadores */
   font-family: var(--mat-sys-title-large-font);
+}
+
+.title {
+  margin-left: 20px;
+  font-family: var(--mat-sys-title-large-font);
+  font-size: var(--mat-sys-title-large-size);
+}
+
+.toolbar .bread-step {
+  display: inline-block;
+}
+
+.toolbar .bread-step .bread-step-title {
+  font-size: var(--mat-sys-title-medium-size);
+  cursor: pointer;
+}
+
+.toolbar .bread-step .bread-step-subtitle {
+  font-size: var(--mat-sys-title-small-size);
+  display: flex;
+  align-items: center; /* centra verticalmente todo */
 }

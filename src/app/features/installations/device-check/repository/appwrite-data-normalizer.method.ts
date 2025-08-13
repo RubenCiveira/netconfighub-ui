@@ -4,5 +4,11 @@ import { Observable, of } from 'rxjs';
 export function appwriteDataNormalizer(data: DeviceCheck): Observable<DeviceCheck> {
   const copy = { ...data } as any;
   copy.projectDevice = (data as any)?.projectDevice?.$ref;
+  if (copy.result == 'pass') {
+    copy.result = 'PASS';
+  }
+  if (copy.result == 'fail') {
+    copy.result = 'FAIL';
+  }
   return of(copy);
 }

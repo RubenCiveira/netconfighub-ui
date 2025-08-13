@@ -36,6 +36,11 @@
       "label": "Edit",
       "saveBtn": "Update",
       "tooltip": "Modify the values of a site"
+    },
+    "floors": {
+      "label": "Floors",
+      "title": "Floors",
+      "tooltip": "Floors"
     }
   },
   "form-group": {

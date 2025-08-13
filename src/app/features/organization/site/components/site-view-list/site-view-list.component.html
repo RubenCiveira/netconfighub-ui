@@ -39,6 +39,8 @@
       </div>
     } @else {
       <list-view
+        [mode]="'card'"
+        [display]="displayer"
         [searching]="list.searching()"
         [data]="list()"
         (next)="next()"

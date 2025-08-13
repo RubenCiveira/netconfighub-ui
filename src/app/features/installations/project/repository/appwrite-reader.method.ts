@@ -4,5 +4,23 @@ import { Observable, of } from 'rxjs';
 export function appwriteReader(data: any): Project {
   const copy = { ...data } as any;
   copy.site = { $ref: data.site, $id: (data as any).site?.$id };
+  if (copy.operationMode == 'SINGLE') {
+    copy.operationMode = 'single';
+  }
+  if (copy.operationMode == 'DOUBLE') {
+    copy.operationMode = 'double';
+  }
+  if (copy.status == 'DRAFT') {
+    copy.status = 'draft';
+  }
+  if (copy.status == 'PLANNED') {
+    copy.status = 'planned';
+  }
+  if (copy.status == 'IN_PROGRESS') {
+    copy.status = 'in-progress';
+  }
+  if (copy.status == 'COMPLETED') {
+    copy.status = 'completed';
+  }
   return copy;
 }

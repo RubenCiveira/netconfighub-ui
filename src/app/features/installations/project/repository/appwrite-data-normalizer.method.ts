@@ -4,5 +4,23 @@ import { Observable, of } from 'rxjs';
 export function appwriteDataNormalizer(data: Project): Observable<Project> {
   const copy = { ...data } as any;
   copy.site = (data as any)?.site?.$ref;
+  if (copy.operationMode == 'single') {
+    copy.operationMode = 'SINGLE';
+  }
+  if (copy.operationMode == 'double') {
+    copy.operationMode = 'DOUBLE';
+  }
+  if (copy.status == 'draft') {
+    copy.status = 'DRAFT';
+  }
+  if (copy.status == 'planned') {
+    copy.status = 'PLANNED';
+  }
+  if (copy.status == 'in-progress') {
+    copy.status = 'IN_PROGRESS';
+  }
+  if (copy.status == 'completed') {
+    copy.status = 'COMPLETED';
+  }
   return of(copy);
 }

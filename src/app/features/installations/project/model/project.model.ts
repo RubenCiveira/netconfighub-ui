@@ -10,7 +10,7 @@ export interface Project {
   operationMode: 'single' | 'double';
   plannedAt: Date;
   plannedConfigAt?: Date;
-  status: 'planned' | 'in-progress' | 'completed';
+  status: 'draft' | 'planned' | 'in-progress' | 'completed';
   version?: number;
 }
 export interface ProjectFilter {
@@ -30,7 +30,7 @@ export interface ProjectProjection {
   operationMode: 'single' | 'double';
   plannedAt: Date;
   plannedConfigAt?: Date;
-  status: 'planned' | 'in-progress' | 'completed';
+  status: 'draft' | 'planned' | 'in-progress' | 'completed';
   version?: number;
 }
 export function projectProjectionToValue(proyection: Project | ProjectProjection | null | undefined): Project | null {
