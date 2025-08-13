@@ -2,30 +2,62 @@ name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+
+permissions:
+  contents: write  # necesario para push a gh-pages
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: '10.x'
-      - uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci
+
+      # ⬇️ Ajusta el base-href (ver punto 1)
       - name: Build
         run: |
-          npm install
-          npm run-script deploy
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+          npx ng build --configuration production --base-href /netconfighub-ui/
+
+      # ⚠️ Carpeta de salida según tu versión de Angular/CLI
+      # Angular 15+: dist/<proyecto>/browser
+      # Angular <=14: dist/<proyecto>
+      - name: Detect dist folder
+        id: dist
+        run: |
+          if [ -d "dist/netconfighub/browser" ]; then
+            echo "path=dist/netconfighub/browser" >> $GITHUB_OUTPUT
+          else
+            echo "path=dist/netconfighub" >> $GITHUB_OUTPUT
+          fi
+
+      # SPA fallback (opcional pero recomendado para routing)
+      - name: Add SPA fallback
+        run: |
+          cp ${{
+            steps.dist.outputs.path
+          }}/index.html ${{
+            steps.dist.outputs.path
+          }}/404.html
+
+      # Evita Jekyll
+      - name: Add .nojekyll
+        run: |
+          touch ${{
+            steps.dist.outputs.path
+          }}/.nojekyll
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist/netconfighub/browser
+          branch: gh-pages
+          folder: ${{ steps.dist.outputs.path }}
