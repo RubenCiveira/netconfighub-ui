@@ -1,0 +1,68 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create floor",
+      "title": "Creando nuevo floor",
+      "tooltip": "Crea un nuevo registro de floor"
+    },
+    "delete": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar",
+      "dismiss": "Aceptar",
+      "label": "Delete floor",
+      "okBtn": "Borrar registro",
+      "report": "Se ha borrado",
+      "title": "Borrar",
+      "tooltip": "Modificar los valores de un floor"
+    },
+    "delete-selection": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "Borrar floor",
+      "okBtn": "Borrar registros",
+      "progress": "Se está borrando",
+      "report": "Se han borrado los registros",
+      "title": "Borrar selección",
+      "tooltip": "Borrar los registros seleccionados"
+    },
+    "detail": {
+      "label": "Detail floor",
+      "title": "Viendo los valores de un floor",
+      "tooltip": "Ver los valores de un floor"
+    },
+    "edit": {
+      "label": "Edit floor",
+      "saveBtn": "Update",
+      "tooltip": "Modificar los valores de un floor"
+    }
+  },
+  "form-group": {
+    "imagePath": {
+      "error": {
+        "required": "Image Path es obligatorio"
+      }
+    },
+    "name": {
+      "error": {
+        "maxlength": "Nombre tiene que tener menos de 250 caracteres",
+        "required": "Nombre es obligatorio"
+      }
+    },
+    "site": {
+      "error": {
+        "required": "sitio es obligatorio"
+      }
+    }
+  },
+  "list": {
+    "filter": {
+      "button": "Filtrar"
+    },
+    "search": {
+      "button": "Buscar",
+      "title": "Buscar"
+    }
+  }
+}

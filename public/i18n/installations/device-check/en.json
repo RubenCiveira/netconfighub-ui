@@ -1,0 +1,119 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create device check",
+      "title": "Creating new device check",
+      "tooltip": "Create a new device check record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete device check",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a device check"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Clear device check",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail device check",
+      "title": "Viewing the values of a device check",
+      "tooltip": "View the values of a device check"
+    },
+    "edit": {
+      "label": "Edit device check",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a device check"
+    }
+  },
+  "form-group": {
+    "checked-at": {
+      "time": {
+        "label": "Time",
+        "placeholder": "Time"
+      }
+    },
+    "checkedAt": {
+      "error": {
+        "required": "Verified on is required"
+      }
+    },
+    "checkedBy": {
+      "error": {
+        "maxlength": "Reviewed by must be less than 250 characters",
+        "required": "Reviewed by is required"
+      }
+    },
+    "details": {
+      "error": {
+        "maxlength": "details must be less than 250 characters"
+      }
+    },
+    "projectDevice": {
+      "error": {
+        "required": "project device is required"
+      }
+    },
+    "result": {
+      "error": {
+        "required": "result is required"
+      },
+      "options": {
+        "fail": "FAIL",
+        "pass": "PASS"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "checked-at": {
+        "title": "checked at",
+        "tooltip": "checked at"
+      },
+      "checked-by": {
+        "title": "checked by",
+        "tooltip": "checked by"
+      },
+      "details": {
+        "title": "details",
+        "tooltip": "details"
+      },
+      "project-device": {
+        "title": "project device",
+        "tooltip": "project device"
+      },
+      "result": {
+        "title": "result",
+        "tooltip": "result"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "null": "Default",
+        "result-asc": "result-asc",
+        "result-desc": "result-desc"
+      }
+    }
+  }
+}

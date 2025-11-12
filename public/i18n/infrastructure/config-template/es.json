@@ -1,0 +1,73 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create config template",
+      "title": "Creando nuevo config template",
+      "tooltip": "Crea un nuevo registro de config template"
+    },
+    "delete": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar",
+      "dismiss": "Aceptar",
+      "label": "Delete config template",
+      "okBtn": "Borrar registro",
+      "report": "Se ha borrado",
+      "title": "Borrar",
+      "tooltip": "Modificar los valores de un config template"
+    },
+    "delete-selection": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "Borrar config template",
+      "okBtn": "Borrar registros",
+      "progress": "Se está borrando",
+      "report": "Se han borrado los registros",
+      "title": "Borrar selección",
+      "tooltip": "Borrar los registros seleccionados"
+    },
+    "detail": {
+      "label": "Detail config template",
+      "title": "Viendo los valores de un config template",
+      "tooltip": "Ver los valores de un config template"
+    },
+    "edit": {
+      "label": "Edit config template",
+      "saveBtn": "Update",
+      "tooltip": "Modificar los valores de un config template"
+    }
+  },
+  "form-group": {
+    "name": {
+      "error": {
+        "maxlength": "Nombre tiene que tener menos de 250 caracteres",
+        "required": "Nombre es obligatorio"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "name": {
+        "title": "Nombre",
+        "tooltip": "Nombre"
+      }
+    },
+    "filter": {
+      "button": "Filtrar"
+    },
+    "search": {
+      "button": "Buscar",
+      "title": "Buscar"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "Nombre ASC",
+        "name-desc": "Nombre: DESC",
+        "null": "Por defecto"
+      }
+    }
+  }
+}

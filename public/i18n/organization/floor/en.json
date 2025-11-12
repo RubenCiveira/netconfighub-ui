@@ -1,0 +1,27 @@
+{
+  "list": {
+    "column": {
+      "image-path": {
+        "title": "image path",
+        "tooltip": "image path"
+      },
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      },
+      "site": {
+        "title": "site",
+        "tooltip": "site"
+      }
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      }
+    }
+  }
+}

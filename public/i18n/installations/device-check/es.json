@@ -1,0 +1,119 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create device check",
+      "title": "Creando nuevo device check",
+      "tooltip": "Crea un nuevo registro de device check"
+    },
+    "delete": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar",
+      "dismiss": "Aceptar",
+      "label": "Delete device check",
+      "okBtn": "Borrar registro",
+      "report": "Se ha borrado",
+      "title": "Borrar",
+      "tooltip": "Modificar los valores de un device check"
+    },
+    "delete-selection": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "Borrar device check",
+      "okBtn": "Borrar registros",
+      "progress": "Se está borrando",
+      "report": "Se han borrado los registros",
+      "title": "Borrar selección",
+      "tooltip": "Borrar los registros seleccionados"
+    },
+    "detail": {
+      "label": "Detail device check",
+      "title": "Viendo los valores de un device check",
+      "tooltip": "Ver los valores de un device check"
+    },
+    "edit": {
+      "label": "Edit device check",
+      "saveBtn": "Update",
+      "tooltip": "Modificar los valores de un device check"
+    }
+  },
+  "form-group": {
+    "checked-at": {
+      "time": {
+        "label": "Hora",
+        "placeholder": "Hora"
+      }
+    },
+    "checkedAt": {
+      "error": {
+        "required": "Verificado el es obligatorio"
+      }
+    },
+    "checkedBy": {
+      "error": {
+        "maxlength": "Revisado por tiene que tener menos de 250 caracteres",
+        "required": "Revisado por es obligatorio"
+      }
+    },
+    "details": {
+      "error": {
+        "maxlength": "detalles tiene que tener menos de 250 caracteres"
+      }
+    },
+    "projectDevice": {
+      "error": {
+        "required": "dispositivo de proyecto es obligatorio"
+      }
+    },
+    "result": {
+      "error": {
+        "required": "resultado es obligatorio"
+      },
+      "options": {
+        "fail": "REPROBADO",
+        "pass": "APROBADO"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "checked-at": {
+        "title": "Verificado el",
+        "tooltip": "Verificado el"
+      },
+      "checked-by": {
+        "title": "Revisado por",
+        "tooltip": "Revisado por"
+      },
+      "details": {
+        "title": "detalles",
+        "tooltip": "detalles"
+      },
+      "project-device": {
+        "title": "dispositivo de proyecto",
+        "tooltip": "dispositivo de proyecto"
+      },
+      "result": {
+        "title": "resultado",
+        "tooltip": "resultado"
+      }
+    },
+    "filter": {
+      "button": "Filtrar"
+    },
+    "search": {
+      "button": "Buscar",
+      "title": "Buscar"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "null": "Por defecto",
+        "result-asc": "result-asc",
+        "result-desc": "result-desc"
+      }
+    }
+  }
+}

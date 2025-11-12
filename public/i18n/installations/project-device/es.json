@@ -1,0 +1,68 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create project device",
+      "title": "Creando nuevo project device",
+      "tooltip": "Crea un nuevo registro de project device"
+    },
+    "delete": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar",
+      "dismiss": "Aceptar",
+      "label": "Delete project device",
+      "okBtn": "Borrar registro",
+      "report": "Se ha borrado",
+      "title": "Borrar",
+      "tooltip": "Modificar los valores de un project device"
+    },
+    "delete-selection": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "Borrar project device",
+      "okBtn": "Borrar registros",
+      "progress": "Se está borrando",
+      "report": "Se han borrado los registros",
+      "title": "Borrar selección",
+      "tooltip": "Borrar los registros seleccionados"
+    },
+    "detail": {
+      "label": "Detail project device",
+      "title": "Viendo los valores de un project device",
+      "tooltip": "Ver los valores de un project device"
+    },
+    "edit": {
+      "label": "Edit project device",
+      "saveBtn": "Update",
+      "tooltip": "Modificar los valores de un project device"
+    }
+  },
+  "form-group": {
+    "name": {
+      "error": {
+        "maxlength": "Nombre tiene que tener menos de 250 caracteres",
+        "required": "Nombre es obligatorio"
+      }
+    },
+    "project": {
+      "error": {
+        "required": "proyecto es obligatorio"
+      }
+    },
+    "type": {
+      "error": {
+        "required": "tipo es obligatorio"
+      }
+    }
+  },
+  "list": {
+    "filter": {
+      "button": "Filtrar"
+    },
+    "search": {
+      "button": "Buscar",
+      "title": "Buscar"
+    }
+  }
+}

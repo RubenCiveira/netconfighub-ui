@@ -1,0 +1,78 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create Vendor",
+      "title": "Creating new vendor",
+      "tooltip": "Create a new vendor record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete Vendor",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify a vendor's values"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Delete Vendor",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail vendor",
+      "title": "Viewing a vendor's values",
+      "tooltip": "View a vendor's values"
+    },
+    "edit": {
+      "label": "Edit Vendor",
+      "saveBtn": "Update",
+      "tooltip": "Modify a vendor's values"
+    },
+    "models": {
+      "label": "Models",
+      "title": "Models",
+      "tooltip": "Models"
+    }
+  },
+  "form-group": {
+    "name": {
+      "error": {
+        "maxlength": "Name must be less than 250 characters",
+        "required": "Name obligatory"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      }
+    }
+  }
+}

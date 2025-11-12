@@ -1,0 +1,177 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create project",
+      "title": "Creando nuevo project",
+      "tooltip": "Crea un nuevo registro de project"
+    },
+    "delete": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar",
+      "dismiss": "Aceptar",
+      "label": "Delete project",
+      "okBtn": "Borrar registro",
+      "report": "Se ha borrado",
+      "title": "Borrar",
+      "tooltip": "Modificar los valores de un project"
+    },
+    "delete-selection": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "Borrar project",
+      "okBtn": "Borrar registros",
+      "progress": "Se está borrando",
+      "report": "Se han borrado los registros",
+      "title": "Borrar selección",
+      "tooltip": "Borrar los registros seleccionados"
+    },
+    "detail": {
+      "label": "Detail project",
+      "title": "Viendo los valores de un project",
+      "tooltip": "Ver los valores de un project"
+    },
+    "edit": {
+      "label": "Edit project",
+      "saveBtn": "Update",
+      "tooltip": "Modificar los valores de un project"
+    },
+    "inventario": {
+      "label": "inventario",
+      "title": "inventario",
+      "tooltip": "inventario"
+    },
+    "maps": {
+      "label": "maps",
+      "title": "maps",
+      "tooltip": "maps"
+    },
+    "mark-to-plan": {
+      "cancelBtn": "No mark to plan",
+      "content": "Confirme que quiere mark to plan",
+      "dismiss": "Aceptar",
+      "label": "mark to plan project",
+      "okBtn": "mark to plan registro",
+      "report": "Se ha mark to plan",
+      "title": "mark to plan",
+      "tooltip": "Modificar los valores de un project"
+    },
+    "mark-to-plan-selection": {
+      "cancelBtn": "No mark to plan",
+      "content": "Confirme que quiere mark to plan los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "mark to plan project",
+      "okBtn": "mark to plan registros",
+      "progress": "Se está mark to plan",
+      "report": "Se han mark to plan los registros",
+      "title": "mark to plan selección",
+      "tooltip": "mark to plan los registros seleccionados"
+    }
+  },
+  "form-group": {
+    "description": {
+      "error": {
+        "maxlength": "descripción tiene que tener menos de 250 caracteres"
+      }
+    },
+    "name": {
+      "error": {
+        "maxlength": "Nombre tiene que tener menos de 250 caracteres",
+        "required": "Nombre es obligatorio"
+      }
+    },
+    "operation-mode": {
+      "options": {
+        "double": "DE DOBLE",
+        "single": "SINGLE"
+      }
+    },
+    "operationMode": {
+      "error": {
+        "required": "modo de operación es obligatorio"
+      }
+    },
+    "planned-at": {
+      "time": {
+        "label": "Hora",
+        "placeholder": "Hora"
+      }
+    },
+    "planned-config-at": {
+      "time": {
+        "label": "Hora",
+        "placeholder": "Hora"
+      }
+    },
+    "plannedAt": {
+      "error": {
+        "required": "planeado en es obligatorio"
+      }
+    },
+    "site": {
+      "error": {
+        "required": "sitio es obligatorio"
+      }
+    },
+    "status": {
+      "error": {
+        "required": "estado es obligatorio"
+      },
+      "options": {
+        "completed": "COMPLETADO",
+        "draft": "BORRADOR",
+        "in-progress": "En progreso",
+        "planned": "PLANIFICADO"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "description": {
+        "title": "descripción",
+        "tooltip": "descripción"
+      },
+      "name": {
+        "title": "Nombre",
+        "tooltip": "Nombre"
+      },
+      "operation-mode": {
+        "title": "modo de operación",
+        "tooltip": "modo de operación"
+      },
+      "planned-at": {
+        "title": "planeado en",
+        "tooltip": "planeado en"
+      },
+      "planned-config-at": {
+        "title": "configuración planificada en",
+        "tooltip": "configuración planificada en"
+      },
+      "site": {
+        "title": "sitio",
+        "tooltip": "sitio"
+      },
+      "status": {
+        "title": "estado",
+        "tooltip": "estado"
+      }
+    },
+    "filter": {
+      "button": "Filtrar"
+    },
+    "search": {
+      "button": "Buscar",
+      "title": "Buscar"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "Nombre ASC",
+        "name-desc": "Nombre: DESC",
+        "null": "Por defecto"
+      }
+    }
+  }
+}

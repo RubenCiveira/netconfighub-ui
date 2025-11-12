@@ -1,0 +1,47 @@
+{
+  "list": {
+    "column": {
+      "installed-at": {
+        "title": "installed at",
+        "tooltip": "installed at"
+      },
+      "installed-by": {
+        "title": "installed by",
+        "tooltip": "installed by"
+      },
+      "model": {
+        "title": "model",
+        "tooltip": "model"
+      },
+      "model-photo": {
+        "title": "model photo",
+        "tooltip": "model photo"
+      },
+      "placement-photo": {
+        "title": "placement photo",
+        "tooltip": "placement photo"
+      },
+      "project-device": {
+        "title": "project device",
+        "tooltip": "project device"
+      },
+      "serial-number": {
+        "title": "serial number",
+        "tooltip": "serial number"
+      },
+      "serial-number-photo": {
+        "title": "serial number photo",
+        "tooltip": "serial number photo"
+      }
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "null": "Default",
+        "serial-number-asc": "serial-number-asc",
+        "serial-number-desc": "serial-number-desc"
+      }
+    }
+  }
+}

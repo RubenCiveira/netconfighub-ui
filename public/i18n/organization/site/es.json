@@ -1,0 +1,96 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create site",
+      "title": "Creando nuevo site",
+      "tooltip": "Crea un nuevo registro de site"
+    },
+    "delete": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar",
+      "dismiss": "Aceptar",
+      "label": "Delete site",
+      "okBtn": "Borrar registro",
+      "report": "Se ha borrado",
+      "title": "Borrar",
+      "tooltip": "Modificar los valores de un site"
+    },
+    "delete-selection": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "Borrar site",
+      "okBtn": "Borrar registros",
+      "progress": "Se está borrando",
+      "report": "Se han borrado los registros",
+      "title": "Borrar selección",
+      "tooltip": "Borrar los registros seleccionados"
+    },
+    "detail": {
+      "label": "Detail site",
+      "title": "Viendo los valores de un site",
+      "tooltip": "Ver los valores de un site"
+    },
+    "edit": {
+      "label": "Edit site",
+      "saveBtn": "Update",
+      "tooltip": "Modificar los valores de un site"
+    },
+    "floors": {
+      "label": "floors",
+      "title": "floors",
+      "tooltip": "floors"
+    }
+  },
+  "form-group": {
+    "address": {
+      "error": {
+        "maxlength": "dirección tiene que tener menos de 250 caracteres"
+      }
+    },
+    "client": {
+      "error": {
+        "required": "client es obligatorio"
+      }
+    },
+    "name": {
+      "error": {
+        "maxlength": "Nombre tiene que tener menos de 250 caracteres",
+        "required": "Nombre es obligatorio"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "address": {
+        "title": "dirección",
+        "tooltip": "dirección"
+      },
+      "client": {
+        "title": "client",
+        "tooltip": "client"
+      },
+      "name": {
+        "title": "Nombre",
+        "tooltip": "Nombre"
+      }
+    },
+    "filter": {
+      "button": "Filtrar"
+    },
+    "search": {
+      "button": "Buscar",
+      "title": "Buscar"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "Nombre ASC",
+        "name-desc": "Nombre: DESC",
+        "null": "Por defecto"
+      }
+    }
+  }
+}

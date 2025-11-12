@@ -1,0 +1,27 @@
+{
+  "list": {
+    "column": {
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      },
+      "type": {
+        "title": "type",
+        "tooltip": "type"
+      },
+      "vendor": {
+        "title": "vendor",
+        "tooltip": "vendor"
+      }
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      }
+    }
+  }
+}

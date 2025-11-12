@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "config de netconfighub"
+  },
+  "api": {
+    "net-civeira-netconfighub": {
+      "identity": "main",
+      "url": "http://net-civeira-netconfighub/dev/hermeshift/hermeshift-api/public"
+    }
+  },
+  "i18n": {
+    "available-langs": ["es", "pt", "fr", "de"]
+  },
+  "identity": {
+    "main": {
+      "type": "oidc",
+      "force-https": false,
+      "redirect": "http://localhost:4200/login-redirect",
+      "url": "http://localhost:8080/realms/{{tenant}}/.well-known/openid-configuration",
+      "issuer": "http://localhost:8080/realms/{{tenant}}",
+      "client-id": "spa",
+      "scope": "openid profile email",
+      "audience": ["hermeshift-ui", "hermeshift-api"],
+      "ph-audience": ["phylax-ui", "phylax-api"],
+      "persistent": true,
+      "pkce": false
+    }
+  },
+  "telemetry": {
+    "name": "",
+    "exporter": {
+      "tracer": {
+        "url": "https://xxxxxxx/v1/traces",
+        "headers": {
+          "x-honeycomb-team": "xxxx"
+        }
+      },
+      "logger": {
+        "url": "https://xxxxxx/v1/logs",
+        "headers": {
+          "x-honeycomb-team": "xxxx"
+        }
+      }
+    }
+  }
+}

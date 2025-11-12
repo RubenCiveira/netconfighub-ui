@@ -1,0 +1,73 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create config template",
+      "title": "Creating new config template",
+      "tooltip": "Create a new template config record"
+    },
+    "delete": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm you want to delete",
+      "dismiss": "Accept",
+      "label": "Delete config template",
+      "okBtn": "Delete Record ",
+      "report": " has been cleared.",
+      "title": "Ticket passed",
+      "tooltip": "Modify the values of a config template"
+    },
+    "delete-selection": {
+      "cancelBtn": "Do not delete",
+      "content": "Confirm that you want to delete the selected records",
+      "dismiss": "Accept",
+      "label": "Delete config template",
+      "okBtn": "Delete Records",
+      "progress": "Deleting",
+      "report": "It can NOT be deleted",
+      "title": "Clear selection.",
+      "tooltip": "Clear selected logs"
+    },
+    "detail": {
+      "label": "Detail config template",
+      "title": "Viewing the values of a config template",
+      "tooltip": "View the values of a config template"
+    },
+    "edit": {
+      "label": "Edit config template",
+      "saveBtn": "Update",
+      "tooltip": "Modify the values of a config template"
+    }
+  },
+  "form-group": {
+    "name": {
+      "error": {
+        "maxlength": "Name must be less than 250 characters",
+        "required": "Name obligatory"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      }
+    },
+    "filter": {
+      "button": "Filter"
+    },
+    "search": {
+      "button": "Search",
+      "title": "Search"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      }
+    }
+  }
+}

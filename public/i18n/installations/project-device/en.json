@@ -1,0 +1,47 @@
+{
+  "list": {
+    "column": {
+      "config-template": {
+        "title": "config template",
+        "tooltip": "config template"
+      },
+      "floor": {
+        "title": "floor",
+        "tooltip": "floor"
+      },
+      "model": {
+        "title": "model",
+        "tooltip": "model"
+      },
+      "name": {
+        "title": "name",
+        "tooltip": "name"
+      },
+      "pos-x": {
+        "title": "pos x",
+        "tooltip": "pos x"
+      },
+      "pos-y": {
+        "title": "pos y",
+        "tooltip": "pos y"
+      },
+      "project": {
+        "title": "project",
+        "tooltip": "project"
+      },
+      "type": {
+        "title": "type",
+        "tooltip": "type"
+      }
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "name-asc",
+        "name-desc": "name-desc",
+        "null": "Default"
+      }
+    }
+  }
+}

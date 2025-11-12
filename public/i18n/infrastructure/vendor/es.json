@@ -1,0 +1,78 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create vendor",
+      "title": "Creando nuevo vendor",
+      "tooltip": "Crea un nuevo registro de vendor"
+    },
+    "delete": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar",
+      "dismiss": "Aceptar",
+      "label": "Delete vendor",
+      "okBtn": "Borrar registro",
+      "report": "Se ha borrado",
+      "title": "Borrar",
+      "tooltip": "Modificar los valores de un vendor"
+    },
+    "delete-selection": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "Borrar vendor",
+      "okBtn": "Borrar registros",
+      "progress": "Se está borrando",
+      "report": "Se han borrado los registros",
+      "title": "Borrar selección",
+      "tooltip": "Borrar los registros seleccionados"
+    },
+    "detail": {
+      "label": "Detail vendor",
+      "title": "Viendo los valores de un vendor",
+      "tooltip": "Ver los valores de un vendor"
+    },
+    "edit": {
+      "label": "Edit vendor",
+      "saveBtn": "Update",
+      "tooltip": "Modificar los valores de un vendor"
+    },
+    "models": {
+      "label": "models",
+      "title": "models",
+      "tooltip": "models"
+    }
+  },
+  "form-group": {
+    "name": {
+      "error": {
+        "maxlength": "Nombre tiene que tener menos de 250 caracteres",
+        "required": "Nombre es obligatorio"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "name": {
+        "title": "Nombre",
+        "tooltip": "Nombre"
+      }
+    },
+    "filter": {
+      "button": "Filtrar"
+    },
+    "search": {
+      "button": "Buscar",
+      "title": "Buscar"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "Nombre ASC",
+        "name-desc": "Nombre: DESC",
+        "null": "Por defecto"
+      }
+    }
+  }
+}

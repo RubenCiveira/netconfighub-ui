@@ -1,0 +1,129 @@
+{
+  "action": {
+    "create": {
+      "createButton": "Create",
+      "label": "Create client",
+      "title": "Creando nuevo client",
+      "tooltip": "Crea un nuevo registro de client"
+    },
+    "delete": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar",
+      "dismiss": "Aceptar",
+      "label": "Delete client",
+      "okBtn": "Borrar registro",
+      "report": "Se ha borrado",
+      "title": "Borrar",
+      "tooltip": "Modificar los valores de un client"
+    },
+    "delete-selection": {
+      "cancelBtn": "No borrar",
+      "content": "Confirme que quiere borrar los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "Borrar client",
+      "okBtn": "Borrar registros",
+      "progress": "Se está borrando",
+      "report": "Se han borrado los registros",
+      "title": "Borrar selección",
+      "tooltip": "Borrar los registros seleccionados"
+    },
+    "detail": {
+      "label": "Detail client",
+      "title": "Viendo los valores de un client",
+      "tooltip": "Ver los valores de un client"
+    },
+    "disable": {
+      "cancelBtn": "No disable",
+      "content": "Confirme que quiere disable",
+      "dismiss": "Aceptar",
+      "label": "disable client",
+      "okBtn": "disable registro",
+      "report": "Se ha disable",
+      "title": "disable",
+      "tooltip": "Modificar los valores de un client"
+    },
+    "disable-selection": {
+      "cancelBtn": "No disable",
+      "content": "Confirme que quiere disable los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "disable client",
+      "okBtn": "disable registros",
+      "progress": "Se está disable",
+      "report": "Se han disable los registros",
+      "title": "disable selección",
+      "tooltip": "disable los registros seleccionados"
+    },
+    "edit": {
+      "label": "Edit client",
+      "saveBtn": "Update",
+      "tooltip": "Modificar los valores de un client"
+    },
+    "enable": {
+      "cancelBtn": "No enable",
+      "content": "Confirme que quiere enable",
+      "dismiss": "Aceptar",
+      "label": "enable client",
+      "okBtn": "enable registro",
+      "report": "Se ha enable",
+      "title": "enable",
+      "tooltip": "Modificar los valores de un client"
+    },
+    "enable-selection": {
+      "cancelBtn": "No enable",
+      "content": "Confirme que quiere enable los registros seleccionados",
+      "dismiss": "Aceptar",
+      "label": "enable client",
+      "okBtn": "enable registros",
+      "progress": "Se está enable",
+      "report": "Se han enable los registros",
+      "title": "enable selección",
+      "tooltip": "enable los registros seleccionados"
+    },
+    "sites": {
+      "label": "sites",
+      "title": "sites",
+      "tooltip": "sites"
+    }
+  },
+  "form-group": {
+    "enabled": {
+      "error": {
+        "required": "habilitado es obligatorio"
+      }
+    },
+    "name": {
+      "error": {
+        "maxlength": "Nombre tiene que tener menos de 250 caracteres",
+        "required": "Nombre es obligatorio"
+      }
+    }
+  },
+  "list": {
+    "column": {
+      "enabled": {
+        "title": "habilitado",
+        "tooltip": "habilitado"
+      },
+      "name": {
+        "title": "Nombre",
+        "tooltip": "Nombre"
+      }
+    },
+    "filter": {
+      "button": "Filtrar"
+    },
+    "search": {
+      "button": "Buscar",
+      "title": "Buscar"
+    }
+  },
+  "search": {
+    "order": {
+      "options": {
+        "name-asc": "Nombre ASC",
+        "name-desc": "Nombre: DESC",
+        "null": "Por defecto"
+      }
+    }
+  }
+}
